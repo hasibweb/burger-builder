@@ -34,13 +34,15 @@ const Control = (props) => {
     return (
         <Consumer>
             {context => {
-                const { increment, decrement, state: { prices: { basePrice, pices } } } = context;
+                const { increment, decrement, state: { prices: { basePrice, pices }, burger } } = context;
 
                 console.log()
                 return (
                     <div className="build-control">
                         <ul className="list-group mt-3">
-                            <li className="list-group-item">{name.charAt(0).toLocaleUpperCase() + name.substr(1)}
+                            <li className="list-group-item">
+                                {name.charAt(0).toLocaleUpperCase() + name.substr(1)}
+                                <span class="badge badge-primary badge-pill mx-2">{burger[name]}</span>
                                 <span className="float-right">
                                     <button onClick={() => increment(name)} className="btn btn-info mr-2">+</button>
                                     <button onClick={() => decrement(name)} className="btn btn-warning">-</button>

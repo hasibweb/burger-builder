@@ -5,13 +5,13 @@ const Context = React.createContext();
 export class Provider extends Component {
     state = {
         burger: {
-            meat: 0,
-            salad: 0,
-            cheese: 0,
-            bacon: 0
+            meat: 1,
+            salad: 1,
+            cheese: 1,
+            bacon: 1
         },
         prices: {
-            basePrice: 1,
+            basePrice: 4,
             pices: {
                 meat: 0.5,
                 salad: 0.7,
